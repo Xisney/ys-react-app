@@ -21,8 +21,6 @@
   },
   "homepage": "https://github.com/Xisney/ys-react-app#readme",
   "devDependencies": {
-    "@commitlint/cli": "^15.0.0",
-    "@commitlint/config-conventional": "^15.0.0",
     "husky": "^7.0.4",
     "lint-staged": "10",
     "prettier": "^2.4.1"

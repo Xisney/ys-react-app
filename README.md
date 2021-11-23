@@ -1,3 +1,1 @@
 ## react app template
-
-sss
