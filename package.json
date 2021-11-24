@@ -4,8 +4,9 @@
   "description": "yusheng personal react app template",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky install"
+    "start": "cross-env NODE_ENV=development webpack serve --config config/webpack.dev.js",
+    "prepare": "husky install",
+    "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js"
   },
   "repository": {
     "type": "git",
@@ -21,11 +22,33 @@
   },
   "homepage": "https://github.com/Xisney/ys-react-app#readme",
   "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-react": "^7.16.0",
+    "@babel/preset-typescript": "^7.16.0",
+    "@types/react": "^17.0.36",
+    "@types/react-dom": "^17.0.11",
+    "babel-loader": "^8.2.3",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.5.1",
+    "html-webpack-plugin": "^5.5.0",
     "husky": "^7.0.4",
+    "less": "^4.1.2",
+    "less-loader": "^10.2.0",
     "lint-staged": "10",
-    "prettier": "^2.4.1"
+    "mini-css-extract-plugin": "^2.4.5",
+    "postcss": "^8.3.11",
+    "postcss-loader": "^6.2.0",
+    "prettier": "^2.4.1",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.64.2",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.5.0"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,json,less}": "prettier --write"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }
