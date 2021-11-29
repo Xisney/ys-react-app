@@ -33,21 +33,21 @@ module.exports = {
         test: /\.(eot|ttf|woff|woff2)$/i,
         type: 'asset',
         generator: {
-          filename: 'static/font/[name][hash:6][ext]',
+          filename: 'assets/font/[name][hash:6][ext]',
         },
       },
       {
         test: /\.svg$/i,
         type: 'asset',
         generator: {
-          filename: 'static/svg/[name][hash:6][ext]',
+          filename: 'assets/svg/[name][hash:6][ext]',
         },
       },
       {
         test: /\.(png|jpe?g|gif)$/i,
         type: 'asset',
         generator: {
-          filename: 'static/image/[name][hash:6][ext]',
+          filename: 'assets/image/[name][hash:6][ext]',
         },
       },
       {
@@ -64,7 +64,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: `[name]${isDev ? '' : '_[contenthash:6]'}.css`,
+      filename: `assets/[name]${isDev ? '' : '_[contenthash:6]'}.css`,
     }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '../public/index.html'),
