@@ -1,7 +1,7 @@
 import style from './index.less'
 
 const App = () => {
-  return <h2 className={style.title}>hello react</h2>
+  return <div className={style.banner}></div>
 }
 
 export default App
